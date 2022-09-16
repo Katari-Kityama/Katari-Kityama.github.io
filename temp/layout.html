@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - {{ message }}</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
+    <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
+    <script src="{% static 'app/scripts/my.js' %}"></script>
+    <script src="{% static 'app/scripts/my1.js' %}"></script>
+    <script src="{% static 'app/scripts/my2.js' %}"></script>
+    <script src="{% static 'app/scripts/my3.js' %}"></script>
+</head>
+
+
+
+
+
+<!-- id="bg" style="background-image: url('{% static "img/background2.png" %}"');" -->
+<!--class="random_bg"-->
+<!---->
+
+<body id="bg" onload="RAND_bg()">
+    <div id="top" class="navbar navbar-inverse">
+        <div>
+
+            <!---
+                Home
+                What is a Kyvera? |-| Overveiw - Anatomy - Lore - Potential ideas - official reference art
+                Art |-| official reference art - Fanart - Katari Archive
+                About the creator |-| Who is Katari? - Katari Archive
+                Additional Info |-| Where did kyvera come from? - Where is kyvera going?
+
+                Join the discord!
+                Support Me!
+            --->
+
+
+            <div class="navbar-collapse collapse">
+
+                {% load static %} <img src="{% static "img/whiteky192x192.png" %}" alt="home" class="cornericon" />
+                <a href="/" class="navbar-brand bold">Kyvera</a>
+
+                <div class="hD1"></div>
+                <div class="hD2"></div>
+
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">What is a Kyvera?</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="{% url 'home' %}">Overveiw</a>
+                        <a href="{% url 'anatomy' %}">Anatomy</a>
+                        <a href="{% url 'lore' %}">Lore</a>
+                        <a href="{% url 'potential_ideas' %}">Potential ideas</a>
+                        <a href="{% url 'official_reference_art' %}">Official Reference Art</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button onclick="my1Function()" class="dropbtn">Art</button>
+                    <div id="myDropdown1" class="dropdown-content">
+                        <a href="{% url 'official_reference_art' %}">official reference art</a>
+                        <a href="{% url 'fanart' %}">Fanart</a>
+                        <a href="{% url 'katari_archive' %}">Katari Archive</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button onclick="my2Function()" class="dropbtn">About the creator</button>
+                    <div id="myDropdown2" class="dropdown-content">
+                        <a href="{% url 'who_is_katari' %}">Who is Katari?</a>
+                        <a href="{% url 'katari_archive' %}">Katari Archive</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button onclick="my3Function()" class="dropbtn">Additional Info</button>
+                    <div id="myDropdown3" class="dropdown-content">
+                        <a href="{% url 'where_did_kyvera_come_from' %}">Where did kyvera come from?</a>
+                        <a href="{% url 'where_is_kyvera_going' %}">Where is kyvera going? </a>
+                    </div>
+                </div>
+
+                <div class="navbar-button navbar-right">
+                    <a href="{% url 'support_us' %}" class="btn btn-navbar btn-large ">Support us!</a>
+                </div>
+
+                <a class="navbar-joindc navbar-right" href="https://discord.com/invite/kyvera" target="_blank" rel="noopener noreferrer">Discord</a>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="body-content">
+        {% block content %}{% endblock %}
+        <div class="row blackbg footerspacer">
+            <hr class="rgb"/>
+            <footer>
+                <p id="end">&copy; {{ year }} - Kyvera Design Right Reserved</p>
+
+            </footer>
+        </div>
+    </div>
+
+
+
+    <script src="{% static 'app/scripts/jquery-1.10.2.js' %}"></script>
+    <script src="{% static 'app/scripts/bootstrap.js' %}"></script>
+    <script src="{% static 'app/scripts/respond.js' %}"></script>
+    {% block scripts %}{% endblock %}
+
+    <script>
+        function RAND_bg() {
+
+            var bgColorArray = ['{% static "img/background.png" %}', '{% static "img/background2.png" %}', '{% static "img/background3.png" %}', '{% static "img/background4.png" %}'];
+            selectBG = bgColorArray[Math.floor(Math.random() * bgColorArray.length)];
+
+            document.body.style.backgroundImage = 'url(' + selectBG + ')';
+        }
+    </script>
+
+</body>
+</html>

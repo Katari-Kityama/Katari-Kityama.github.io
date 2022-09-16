@@ -1,0 +1,72 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<!---
+<div class="jumbotron">
+    <h1>What is a Kyvera?</h1>
+    <p class="lead">Django is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="https://www.djangoproject.com/" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+</div>
+    --->
+
+<div class="middle-left jumbotron container">
+    <h1>What is a Kyvera?</h1>
+    <p class="lead">What makes a kyvera a kyvera?</p>
+    <p><a href="https://www.djangoproject.com/" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+</div>
+
+<div class="spacer400"></div>
+
+<div class="row blackbg">
+
+    <hr class="rgb" />
+
+    <div class="kyvcontainertitle">
+        <div class="coltxt-img row">
+            <div class="coltxt">
+                <h2 class="pgheadtext">filler text filler text filler text</h2>
+                <p>filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text</p>
+            </div>
+            {% load static %} <img class="colimg" src="{% static "img/test.jpg" %}" alt="Kyvsit">
+        </div>
+
+        <div class="coltxt-img2 row">
+            <div class="coltxt2">
+                <h2 class="pgheadtext2">filler text filler text filler text</h2>
+                <p>filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text</p>
+            </div>
+            {% load static %} <img class="colimg2" src="{% static "img/test.jpg" %}" alt="Kyvsit">
+        </div>
+    </div>
+
+    <hr class="rgb" />
+
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            Django gives you a powerful, patterns-based way to build dynamic websites that
+            enables a clean separation of concerns and gives you full control over markup
+            for enjoyable, agile development.
+        </p>
+        <p><a class="btn btn-default" href="https://djangobook.com/django-tutorials/">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Get more libraries</h2>
+        <p>The Python Package Index is a repository of software for the Python programming language.</p>
+        <p><a class="btn btn-default" href="https://pypi.org/">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Microsoft Azure</h2>
+        <p>You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.</p>
+        <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
+    </div>
+
+</div>
+
+
+
+
+
+
+{% endblock %}

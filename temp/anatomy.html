@@ -1,0 +1,67 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+<!-- ;:l -->
+<div class="sidebox">
+    <h3>Page content</h3>
+    <hr class="norm" />
+    <a href="#top">Top</a><p></p>
+    <a href="#body">The body</a><p></p>
+    <a href="#tail">The tail</a><p></p>
+    <a href="#head">The head</a><p></p>
+    <a href="#end">The scales</a><p></p>
+    <a href="#end">The colors</a><p></p>
+    <a href="#end">Bottom</a>
+</div>
+
+<div class="kyvcontainer">
+    {% load static %} <img src="{% static "img/Thud2.png" %}" alt="home" class="text-right pageicon" />
+    {% load static %} <img src="{% static "img/Thud1.png" %}" alt="home" class="text-right pageicon" />
+    <h1 class="titletxt">Anatomy</h1>
+    <hr class="norm" />
+
+    <div class="coltxt-img row">
+        <div class="coltxt">
+            <h2 class="pgheadtext">What Makes a Kyvera a Kyvera?</h2>
+                <p>"Kyvera" is the name of a species with a group of set characteristics, but it's generally better described as a <b>group of species. </b>Although there are variants of kyvera with differing traits, most kyvera follow the same characteristics, which will be described below.</p>
+                <p><b>Kyvera are exotic animals.</b> After millenia of evolution on an ancient world, kyvera have evolved unique muscular tails they use to arm themselves. Unlike their flesh bodies, a kyvera's tail contains an exotic "blood" substance that allows them to control the color and brightness of their flaps. At the end of their tail is a claw-like tip.</p>
+        </div>
+        {% load static %} <img class="colimg" src="{% static "img/test.jpg" %}" alt="Kyvsit">
+    </div>
+
+    <div class="coltxt-img2 row">
+        <div class="coltxt2">
+            <h2 id="body" class="pgheadtext2">The Body / Build</h2>
+                <p>Kyvera have a fuzzy <b>rodent like build</b>, with some aspects of other animals like lizards and foxes. They have <b>wide hips and large legs</b> to support the weight of their tails, and a smaller chest with frail arms. On their back is a <b>row of spike-like flaps.</b></p>
+                <p><b>Kyvera body length</b> when standing up averages about 3 feet (90 cm), while their tail is usually slightly longer at 3.5 feet (105 cm). If you were to put a kyv flat on its belly, they would be about 5 feet long. at the base of the tail are flaps, which can vary in count.</p>
+        </div>
+        {% load static %} <img class="colimg2" src="{% static "img/test.jpg" %}" alt="Kyvsit">
+    </div>
+
+    <div class="coltxt-img row">
+        <div class="coltxt">
+            <h2 id="tail" class="pgheadtext">The Tail, AKA "the stabby grabby"</h2>
+                <p>A Kyvera's most distinct feature, the tail!</p>
+                <p>They are covered in scale like flaps, which are hard yet flexible. The kyvera can move them away from the tail, unsheathing the sharp edges of the flaps. at the tip is a claw like weapon, which allows the kyvera to defend itself, as well as anchor itself into walls and other objects, like some rather unfortunate... creatures. They can also can grasp things with their tail.`</p>
+                <p>The tail end usually is a spike shaped tip that opens up into 3, 4, 5, or even more peices to reveal a smaller spike which the kyvera can retract. Additionally, each appenditure has a short whip that they can retract.</p>
+            
+        </div>
+        {% load static %} <img class="colimg" src="{% static "img/test.jpg" %}" alt="Kyvsit">
+    </div>
+
+        <div class="coltxt-img2 row">
+        <div class="coltxt2">
+            <h2 id="head" class="pgheadtext2">The Head</h2>
+                <p>Kyvera heads feature a foxlike maw that is short to mid length with large flat ears that can vary in shape and size, but generally are rather large for the head. On the sides of their jaws are flaps, which can vary in count.</p>
+                <p>Kyvera have unique eyes do to their exotic nature, which allows them to see more colors than humans can. This is actually important for gathering food, their favorite food emits ultraviolet rays. generally they have large eyes with large white pupils. </p>
+            
+        </div>
+        {% load static %} <img class="colimg2" src="{% static "img/test.jpg" %}" alt="Kyvsit">
+    </div>
+
+    <hr class="norm" />
+</div>
+
+
+
+{% endblock %}
