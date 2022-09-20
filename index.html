@@ -1,72 +1,212 @@
-{% extends "app/templates/layout.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ title }} - {{ message }}</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
+	<script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
+	<script src="{% static 'app/scripts/my.js' %}"></script>
+	<script src="{% static 'app/scripts/my1.js' %}"></script>
+	<script src="{% static 'app/scripts/my2.js' %}"></script>
+	<script src="{% static 'app/scripts/my3.js' %}"></script>
+</head>
 
-{% block content %}
 
-<!---
-<div class="jumbotron">
-	<h1>What is a Kyvera?</h1>
-	<p class="lead">Django is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-	<p><a href="https://www.djangoproject.com/" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-</div>
-	--->
 
-<div class="middle-left jumbotron container">
-	<h1>What is a Kyvera?</h1>
-	<p class="lead">What makes a kyvera a kyvera?</p>
-	<p><a href="https://www.djangoproject.com/" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-</div>
 
-<div class="spacer400"></div>
 
-<div class="row blackbg">
+<!-- id="bg" style="background-image: url('{% static "img/background2.png" %}"');" -->
+<!--class="random_bg"-->
+<!---->
 
-	<hr class="rgb" />
+<body id="bg" onload="RAND_bg()">
+	<div id="top" class="navbar navbar-inverse">
+		<div>
 
-	<div class="kyvcontainertitle">
-		<div class="coltxt-img row">
-			<div class="coltxt">
-				<h2 class="pgheadtext">filler text filler text filler text</h2>
-				<p>filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text</p>
+			<!---
+				Home
+				What is a Kyvera? |-| Overveiw - Anatomy - Lore - Potential ideas - official reference art
+				Art |-| official reference art - Fanart - Katari Archive
+				About the creator |-| Who is Katari? - Katari Archive
+				Additional Info |-| Where did kyvera come from? - Where is kyvera going?
+
+				Join the discord!
+				Support Me!
+			--->
+
+
+			<div class="navbar-collapse collapse">
+
+				{% load static %} <img src="{% static " img /whiteky192x192.png" %}" alt="home" class="cornericon" />
+				<a href="/" class="navbar-brand bold">Kyvera</a>
+
+				<div class="hD1"></div>
+				<div class="hD2"></div>
+
+				<div class="dropdown">
+					<button onclick="myFunction()" class="dropbtn">What is a Kyvera?</button>
+					<div id="myDropdown" class="dropdown-content">
+						<a href="{% url 'home' %}">Overveiw</a>
+						<a href="{% url 'anatomy' %}">Anatomy</a>
+						<a href="{% url 'lore' %}">Lore</a>
+						<a href="{% url 'potential_ideas' %}">Potential ideas</a>
+						<a href="{% url 'official_reference_art' %}">Official Reference Art</a>
+					</div>
+				</div>
+
+				<div class="dropdown">
+					<button onclick="my1Function()" class="dropbtn">Art</button>
+					<div id="myDropdown1" class="dropdown-content">
+						<a href="{% url 'official_reference_art' %}">official reference art</a>
+						<a href="{% url 'fanart' %}">Fanart</a>
+						<a href="{% url 'katari_archive' %}">Katari Archive</a>
+					</div>
+				</div>
+
+				<div class="dropdown">
+					<button onclick="my2Function()" class="dropbtn">About the creator</button>
+					<div id="myDropdown2" class="dropdown-content">
+						<a href="{% url 'who_is_katari' %}">Who is Katari?</a>
+						<a href="{% url 'katari_archive' %}">Katari Archive</a>
+					</div>
+				</div>
+
+				<div class="dropdown">
+					<button onclick="my3Function()" class="dropbtn">Additional Info</button>
+					<div id="myDropdown3" class="dropdown-content">
+						<a href="{% url 'where_did_kyvera_come_from' %}">Where did kyvera come from?</a>
+						<a href="{% url 'where_is_kyvera_going' %}">Where is kyvera going? </a>
+					</div>
+				</div>
+
+				<div class="navbar-button navbar-right">
+					<a href="{% url 'support_us' %}" class="btn btn-navbar btn-large ">Support us!</a>
+				</div>
+
+				<a class="navbar-joindc navbar-right" href="https://discord.com/invite/kyvera" target="_blank" rel="noopener noreferrer">Discord</a>
+
 			</div>
-			{% load static %} <img class="colimg" src="{% static " img /test.jpg" %}" alt="Kyvsit">
+
+
+		</div>
+	</div>
+
+	<div class="body-content">
+
+
+
+
+
+
+		{% block content %}
+
+		<!---
+	<div class="jumbotron">
+		<h1>What is a Kyvera?</h1>
+		<p class="lead">Django is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+		<p><a href="https://www.djangoproject.com/" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+	</div>
+		--->
+
+		<div class="middle-left jumbotron container">
+			<h1>What is a Kyvera?</h1>
+			<p class="lead">What makes a kyvera a kyvera?</p>
+			<p><a href="" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
 		</div>
 
-		<div class="coltxt-img2 row">
-			<div class="coltxt2">
-				<h2 class="pgheadtext2">filler text filler text filler text</h2>
-				<p>filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text</p>
+		<div class="spacer400"></div>
+
+		<div class="row blackbg">
+
+			<hr class="rgb" />
+
+			<div class="kyvcontainertitle">
+				<div class="coltxt-img row">
+					<div class="coltxt">
+						<h2 class="pgheadtext">filler text filler text filler text</h2>
+						<p>filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text</p>
+					</div>
+					{% load static %} <img class="colimg" src="{% static " img /test.jpg" %}" alt="Kyvsit">
+				</div>
+
+				<div class="coltxt-img2 row">
+					<div class="coltxt2">
+						<h2 class="pgheadtext2">filler text filler text filler text</h2>
+						<p>filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text</p>
+					</div>
+					{% load static %} <img class="colimg2" src="{% static " img /test.jpg" %}" alt="Kyvsit">
+				</div>
 			</div>
-			{% load static %} <img class="colimg2" src="{% static " img /test.jpg" %}" alt="Kyvsit">
+
+			<hr class="rgb" />
+
+			<div class="col-md-4">
+				<h2>Getting started</h2>
+				<p>
+					Django gives you a powerful, patterns-based way to build dynamic websites that
+					enables a clean separation of concerns and gives you full control over markup
+					for enjoyable, agile development.
+				</p>
+				<p><a class="btn btn-default" href="">Learn more &raquo;</a></p>
+			</div>
+			<div class="col-md-4">
+				<h2>Get more libraries</h2>
+				<p>The Python Package Index is a repository of software for the Python programming language.</p>
+				<p><a class="btn btn-default" href="">Learn more &raquo;</a></p>
+			</div>
+			<div class="col-md-4">
+				<h2>Microsoft Azure</h2>
+				<p>You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.</p>
+				<p><a class="btn btn-default" href="">Learn more &raquo;</a></p>
+			</div>
+
+		</div>
+
+
+
+
+
+
+		{% endblock %}
+
+
+
+
+
+		{% block content %}{% endblock %}
+		<div class="row blackbg footerspacer">
+			<hr class="rgb" />
+			<footer>
+				<p id="end">&copy; {{ year }} - Kyvera Design Right Reserved</p>
+
+			</footer>
 		</div>
 	</div>
 
-	<hr class="rgb" />
 
-	<div class="col-md-4">
-		<h2>Getting started</h2>
-		<p>
-			Django gives you a powerful, patterns-based way to build dynamic websites that
-			enables a clean separation of concerns and gives you full control over markup
-			for enjoyable, agile development.
-		</p>
-		<p><a class="btn btn-default" href="https://djangobook.com/django-tutorials/">Learn more &raquo;</a></p>
-	</div>
-	<div class="col-md-4">
-		<h2>Get more libraries</h2>
-		<p>The Python Package Index is a repository of software for the Python programming language.</p>
-		<p><a class="btn btn-default" href="https://pypi.org/">Learn more &raquo;</a></p>
-	</div>
-	<div class="col-md-4">
-		<h2>Microsoft Azure</h2>
-		<p>You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.</p>
-		<p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
-	</div>
 
-</div>
+	<script src="{% static 'app/scripts/jquery-1.10.2.js' %}"></script>
+	<script src="{% static 'app/scripts/bootstrap.js' %}"></script>
+	<script src="{% static 'app/scripts/respond.js' %}"></script>
+	{% block scripts %}{% endblock %}
+
+	<script>
+        function RAND_bg() {
+
+            var bgColorArray = ['{% static "img/background.png" %}', '{% static "img/background2.png" %}', '{% static "img/background3.png" %}', '{% static "img/background4.png" %}'];
+            selectBG = bgColorArray[Math.floor(Math.random() * bgColorArray.length)];
+
+            document.body.style.backgroundImage = 'url(' + selectBG + ')';
+        }
+	</script>
+
+</body>
+</html>
 
 
 
 
 
-
-{% endblock %}
