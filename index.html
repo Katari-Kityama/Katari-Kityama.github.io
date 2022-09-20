@@ -3,21 +3,20 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{{ title }} - {{ message }}</title>
-	{% load staticfiles %}
-	<link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
-	<link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
-	<script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
-	<script src="{% static 'app/scripts/my.js' %}"></script>
-	<script src="{% static 'app/scripts/my1.js' %}"></script>
-	<script src="{% static 'app/scripts/my2.js' %}"></script>
-	<script src="{% static 'app/scripts/my3.js' %}"></script>
+	<title>Kyvera - Home </title>
+	<link rel="stylesheet" type="text/css" href="'app/content/bootstrap.min.css'" />
+	<link rel="stylesheet" type="text/css" href="'app/content/site.css'" />
+	<script src="'app/scripts/modernizr-2.6.2.js'"></script>
+	<script src="'app/scripts/my.js'"></script>
+	<script src="'app/scripts/my1.js'"></script>
+	<script src="'app/scripts/my2.js'"></script>
+	<script src="'app/scripts/my3.js'"></script>
 </head>
 
 
 
 
-
+	
 <!-- id="bg" style="background-image: url('{% static "img/background2.png" %}"');" -->
 <!--class="random_bg"-->
 <!---->
@@ -96,12 +95,6 @@
 
 	<div class="body-content">
 
-
-
-
-
-
-		{% block content %}
 
 		<!---
 	<div class="jumbotron">
@@ -188,15 +181,15 @@
 
 
 
-	<script src="{% static 'app/scripts/jquery-1.10.2.js' %}"></script>
-	<script src="{% static 'app/scripts/bootstrap.js' %}"></script>
-	<script src="{% static 'app/scripts/respond.js' %}"></script>
+	<script src="'app/scripts/jquery-1.10.2.js'"></script>
+	<script src="'app/scripts/bootstrap.js'"></script>
+	<script src="'app/scripts/respond.js'"></script>
 	{% block scripts %}{% endblock %}
 
 	<script>
         function RAND_bg() {
 
-            var bgColorArray = ['{% static "img/background.png" %}', '{% static "img/background2.png" %}', '{% static "img/background3.png" %}', '{% static "img/background4.png" %}'];
+            var bgColorArray = ['"img/background.png"', '"img/background2.png"', '"img/background3.png"', '"img/background4.png"'];
             selectBG = bgColorArray[Math.floor(Math.random() * bgColorArray.length)];
 
             document.body.style.backgroundImage = 'url(' + selectBG + ')';
