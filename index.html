@@ -5,6 +5,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kyvera - Home</title>
+
+    <link rel="CSS1" href="app/css/site.css">
 </head>
 
 
@@ -71,6 +73,17 @@
 
         <hr class="norm" />
     </div>
+
+
+    <script>
+        function RAND_bg() {
+
+            var bgColorArray = ['app/images/background.png', 'app/images/background2.png', 'app/images/background3.png', 'app/images/background4.png'];
+            selectBG = bgColorArray[Math.floor(Math.random() * bgColorArray.length)];
+
+            document.body.style.backgroundImage = 'url(' + selectBG + ')';
+        }
+    </script>
 
 
 </body>
