@@ -42,3 +42,9 @@
     float: left;
     width: 50px;
 }
+
+.norm {
+    border-top: 1.5px solid white;
+    margin-right: 0px;
+    margin-left: 0px;
+}
