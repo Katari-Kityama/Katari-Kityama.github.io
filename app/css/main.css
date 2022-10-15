@@ -16,3 +16,10 @@
     background-color: rgb(0, 0, 0, 85%);
     min-width: 200px;
 }
+
+#bg {
+    background-repeat: no-repeat;
+    background-size: 1700px 900px;
+    background-position: top;
+    background-attachment: fixed;
+}

@@ -10,17 +10,23 @@
 </head>
 
 
-<body>
-    <p class="test">restarting :/</p>
-
-    <div class="kyvcontainer"></div>
+<body id="bg" onload="RAND_bg()">
 
 
-    <style>
-        body {
-            background-image: url('app/images/background.png');
+    <div class="kyvcontainer">
+        <p class="test">restarting :/</p>
+    </div>
+
+
+    <script>
+        function RAND_bg() {
+
+            var bgColorArray = ['app/images/background.png', 'app/images/background2.png', 'app/images/background3.png', 'app/images/background4.png'];
+            selectBG = bgColorArray[Math.floor(Math.random() * bgColorArray.length)];
+
+            document.body.style.backgroundImage = 'url(' + selectBG + ')';
         }
-    </style>
+    </script>
 
 
 </body>
