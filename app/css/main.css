@@ -20,9 +20,7 @@
 
 #bg {
     background-repeat: no-repeat;
-    background-size: 1700px 900px;
-    background-position: top;
-    background-attachment: fixed;
+    background-size: auto;
 }
 
 .sidebox {
@@ -41,7 +39,7 @@
     min-width: 170px;
     float: left;
     width: 50px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .norm {
