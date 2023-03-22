@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-</head>
+    <title>My Website - Home</title>
+    <script src="javascript/w3-include-html.js"></script>
 
+    <link rel="import" href="header.html">
+</head>
 <body>
+    <div w3-include-html="layout/navbar.html"></div>
     <main>
-        <h1>Welcome to My Website</h1>
+        <h1>Welcome to KyvKore!</h1>
+        <p>WIP</p>
+        <p>This will be the homepage of the kyvera website!</p>
     </main>
 
-    <script src="index.js"></script>
-</body>
+    <div w3-include-html="layout/footer.html"></div>
 
+    <script>
+        includeHTML();
+    </script>
+</body>
 </html>

@@ -1,1 +1,1 @@
-npx http-server
+npx browser-sync start --server --files "*.html, js/*.js"

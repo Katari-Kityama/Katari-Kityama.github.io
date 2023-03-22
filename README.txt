@@ -1,1 +1,0 @@
-# Welcome user! This is the official repository that stores and hosts the kyvera website.
