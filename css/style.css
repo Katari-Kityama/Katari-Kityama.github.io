@@ -1,0 +1,217 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('./fonts/Poppins-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./fonts/Poppins-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./fonts/Poppins-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./fonts/Poppins-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./fonts/Poppins-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./fonts/Poppins-ExtraBoldItalic.woff') format('woff');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./fonts/Poppins-ExtraLight.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./fonts/Poppins-ExtraLightItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./fonts/Poppins-Italic.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./fonts/Poppins-Light.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./fonts/Poppins-LightItalic.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./fonts/Poppins-Medium.woff') format('woff');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./fonts/Poppins-MediumItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./fonts/Poppins-Regular.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./fonts/Poppins-SemiBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./fonts/Poppins-SemiBoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./fonts/Poppins-Thin.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./fonts/Poppins-ThinItalic.woff') format('woff');
+  font-weight: 800;
+  font-style: italic;
+}
+
+/* --------------------------------------------------------------------------------------------------- */
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  position: absolute;
+  z-index: 1; 
+  /*border: 2px solid red;  Add border to visualize detection boxes */
+}
+
+.overlay-image {
+  position: absolute;
+  z-index: 2; 
+  display: none;
+}
+
+.additional-content {
+  position: absolute;
+  z-index: 3; 
+}
+
+/* Set the transition effect for fading in and out */
+.container .overlay-image, .container .additional-content {
+  transition: opacity 0.1s ease-in-out;
+  opacity: 0; /* Start with elements invisible */
+  display: block; /* Elements need to be 'block' to be visible */
+  pointer-events: none; /* Prevents click events on the invisible elements */
+}
+
+/* Add a class for when the elements are visible */
+.container .visible {
+  opacity: 1;
+  pointer-events: auto; /* Allows click events when the elements are visible */
+}
+
+/* Particle effect class */
+.particle-effect {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  pointer-events: none; /* Prevents click events on the invisible elements */
+}
+
+/* --------------------------------------------------------------------------------------------------- */
+
+#content .boxblock {
+  position: absolute;
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  justify-content: space-between; /* Space out children horizontally */
+  border-radius: 10px;
+  backdrop-filter: blur(25px);
+  background-color: rgba(3, 12, 40, 0.6);
+  padding-top: 30px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+}
+
+#content .columnL, .columnR {
+  flex: 1; /* Both columns take up equal space */
+}
+
+#content .title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px; 
+  font-weight: bold; 
+  color: #ffffff; 
+}
+
+#content .text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px; 
+  color: #e7e7e7; 
+}
+
+#content .divider {
+  border-left: 2px solid rgb(3, 13, 41); 
+  margin: 0 20px; 
+  height: 100%; 
+}
+
+#content .image {
+  height: auto;
+  flex-shrink: 0;
+  align-self: center;
+  border-radius: 8px;
+}
+

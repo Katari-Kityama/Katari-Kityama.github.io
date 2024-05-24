@@ -1,0 +1,1 @@
+document.getElementById('interactive-room').ondragstart = function() { return false; };
